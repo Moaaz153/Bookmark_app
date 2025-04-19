@@ -1,9 +1,13 @@
 body{
-    background-color: #f7ecde;
+    /* background-color: #f7ecde; */
+    background-image: url(../icegif-352.gif);
+    background-position: center;
+    background-size: cover;
+    background-clip: content-box;
     font-family: "PT Sans Caption", sans-serif;
 }
 ::selection{
-    background-color:#fec260 ;
+    background-color:#CF0F47 ;
     color: #352e28;
 }
 h1{
@@ -18,7 +22,7 @@ h1::before{
     content: "";
     height: 30%;
     width: 100%;
-    background-color: #fec260;
+    background-color: #A5158C;
     position: absolute;
     bottom: 5%;
     z-index: -1;
@@ -32,7 +36,7 @@ h3{
     margin: auto;
     font-family: "Righteous", sans-serif;
     font-size: 25px;
-    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-image: linear-gradient(to right, #CF0F47, #A5158C);
     background-clip: text;
     -webkit-background-clip: text ;
     -webkit-text-fill-color: transparent;
@@ -42,11 +46,20 @@ h3{
     border-style: dotted;
     border-color: #352e28;
 }
+.form-control {
+    background-color: #ffffff6a;
+ }
 .form-control:focus{
   color: #212529;
   background-color: #fff;
-  border-color: #d99c39;
-  box-shadow: 0 0 0 0.25rem #fec26055;
+  /* border-color: #d99c39; */
+  border-color: #A5158C;
+  /* box-shadow: 0 0 0 0.25rem #fec26055; */
+  box-shadow: 0 0 0 0.25rem #CF0F47;
+}
+.table{
+    background-color: #ffffff6a !important;
+    --bs-table-bg: unsit;
 }
 .btn-visit{
     color: white;

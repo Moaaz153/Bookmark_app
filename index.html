@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" type="image/x-icon" href="OIP.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="container py-5">
+        <h1 class="m-auto ">Bookmarker</h1>
+        <div class="my-5 py-4 px-3 favorite-bookmark">
+            <h3 class="text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                    class="fa-solid fa-bookmark"></i></h3>
+                    <div id="alertMsg" class="alert alert-danger mt-5 d-none">inputs must be valid</div>
+            <div class="mt-5">
+                <label for="bookmarkName" class="pb-2 fw-semibold"><i class="fa-solid fa-floppy-disk pe-2"></i> Site
+                    Name</label>
+                <input type="text" oninput="nameValidation()" id="bookmarkName" placeholder="Bookmark Name" class="form-control">
+                <p class="text-danger fw-bold d-none" id="nameMsg">name must contain at least 3 characters</p>
+            </div>
+            <div class="mt-4">
+                <label for="siteUrl" class="pb-2 fw-semibold"><i class="fa-solid fa-link pe-2"></i> Site Url</label>
+                <input type="url" oninput="urlValidation()" id="siteUrl" placeholder="Websit Url" class="form-control"  >
+                <p class="text-danger fw-bold d-none" id="urlMsg">Site URL must be a valid one</p>
+            </div>
+            <div class="mt-4 text-center">
+                <button id="addBtn" onclick="addUrl();" class="btn btn-danger px-5">Submit</button>
+            </div>
+        </div>
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Websit Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableData">
+                <!-- <tr>
+                    <td>1</td>
+                    <td>Moaaz</td>
+                    <td><a href="" target="_blank" class="btn btn-visit"><i class="fa-solid fa-eye"></i> Visit</a></td>
+                    <td><button class="btn btn-delete"><i class="fa-solid fa-trash"></i> Delete</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
